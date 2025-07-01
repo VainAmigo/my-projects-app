@@ -7,9 +7,7 @@ class AppsListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Apps List'),
-      ),
+      appBar: AppBar(title: const Text('Apps List')),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
         child: ListView(
@@ -19,6 +17,13 @@ class AppsListPage extends StatelessWidget {
               subtitle: const Text('Minimalist education app from Dribble'),
               onTap: () {
                 Navigator.pushNamed(context, AppRouter.edRegisterView);
+              },
+            ),
+            ListTile(
+              title: const Text('Water Consumed App'),
+              subtitle: const Text('Minimalist water consumed app'),
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.wcHomeView);
               },
             ),
           ],
