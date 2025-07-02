@@ -26,6 +26,13 @@ class AppsListPage extends StatelessWidget {
                 Navigator.pushNamed(context, AppRouter.wcHomeView);
               },
             ),
+            ListTile(
+              title: const Text('Task Manager app'),
+              subtitle: const Text('Minimalist Task Manager app'),
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.mintHomeView);
+              },
+            ),
           ],
         ),
       ),
