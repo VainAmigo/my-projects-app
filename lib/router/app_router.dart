@@ -1,3 +1,4 @@
+import 'package:drible_app/apps/cart_app/cart_app.dart';
 import 'package:drible_app/apps_list_page.dart';
 import 'package:drible_app/apps/education_app/education_app.dart';
 import 'package:drible_app/apps/water_consumed_app/water_consumed.dart';
@@ -23,6 +24,9 @@ final class AppRouter {
   // minimalistic task app routes
   static const mintHomeView = '/mint-home-view';
 
+  // cart app routes
+  static const cartHomeView = '/cart-home-view';
+
   static Route<void> onGenerateRoute(RouteSettings settings) {
     return switch (settings.name) {
       appsListView => CupertinoPageRoute(builder: (_) => const AppsListPage()),
@@ -32,6 +36,7 @@ final class AppRouter {
       edHomeView => CupertinoPageRoute(builder: (_) => const EdHomeView()),
       wcHomeView => CupertinoPageRoute(builder: (_) => const WcHomeView()),
       mintHomeView => CupertinoPageRoute(builder: (_) => const MintHomeView()),
+      cartHomeView => CupertinoPageRoute(builder: (_) => const CtHomeView()),
       _ => throw Exception('No builder specified for route named: [${settings.name}]'),
     };
   }

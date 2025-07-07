@@ -33,6 +33,13 @@ class AppsListPage extends StatelessWidget {
                 Navigator.pushNamed(context, AppRouter.mintHomeView);
               },
             ),
+            ListTile(
+              title: const Text('Cart App'),
+              subtitle: const Text('Minimalist cart app'),
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.cartHomeView);
+              },
+            ),
           ],
         ),
       ),
