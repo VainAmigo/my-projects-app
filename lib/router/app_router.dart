@@ -26,6 +26,7 @@ final class AppRouter {
 
   // cart app routes
   static const cartHomeView = '/cart-home-view';
+  static const cartProductDetailView = '/cart-product-detail-view';
 
   static Route<void> onGenerateRoute(RouteSettings settings) {
     return switch (settings.name) {
@@ -37,6 +38,9 @@ final class AppRouter {
       wcHomeView => CupertinoPageRoute(builder: (_) => const WcHomeView()),
       mintHomeView => CupertinoPageRoute(builder: (_) => const MintHomeView()),
       cartHomeView => CupertinoPageRoute(builder: (_) => const CtHomeView()),
+      cartProductDetailView => CupertinoPageRoute(
+        builder: (_) => CtProductDetailView(item: settings.arguments as Item),
+      ),
       _ => throw Exception('No builder specified for route named: [${settings.name}]'),
     };
   }

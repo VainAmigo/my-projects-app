@@ -89,7 +89,7 @@ class WcWaterIntakeProgressWidget extends StatelessWidget {
         Icon(Icons.circle, size: 10, color: color),
         const SizedBox(width: 6),
         Text(
-          "$label",
+          label,
           style: const TextStyle(fontSize: 14),
         ),
         const SizedBox(width: 4),
